@@ -1,13 +1,17 @@
 import pytest
 from binary_converter import to_binary
 
-@pytest.mark.parametrize("n, expected", [
-    (0, "0"),
-    (1, "1"),
-    (2, "10"),
-    (10, "1010"),
-    (100, "1100100"),
-])
+
+@pytest.mark.parametrize(
+    "n, expected",
+    [
+        (0, "0"),
+        (1, "1"),
+        (2, "10"),
+        (10, "1010"),
+        (100, "1100100"),
+    ],
+)
 def test_valid_conversion(n, expected):
     assert to_binary(n) == expected
 
